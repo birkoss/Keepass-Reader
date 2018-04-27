@@ -39,7 +39,7 @@ class KeepassReader(object):
 
 		# 3) Establish an AES 128-ECB context, IV: 16x \0, key: transform_seed
 		transform_seed = database.header['transform_seed']
-		cipher = AES.new(bytes(transform_seed), AES.MODE_ECB, bytes(16))
+		cipher = AES.new(bytes(transform_seed), AES.MODE_ECB)
 
 		# 4) Encrypt transform_rounds time the composite_key
 		transformed_key = composite_key
