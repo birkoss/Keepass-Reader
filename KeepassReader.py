@@ -13,9 +13,9 @@ from KeepassDatabase import KeepassDatabase
 
 
 class KeepassReader(object):
-	entries = []
-
-	status = {'error': 0}
+	def __init__(self):
+		self.entries = []
+		self.status = {'error': 0}
 
 	# Open the filename and password
 	# ----------------------------------------------------------------------------
